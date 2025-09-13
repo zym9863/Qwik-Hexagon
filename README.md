@@ -1,3 +1,5 @@
+[English Version](README-EN.md)
+
 # Qwik + Vite
 
 ## 旋转六边形内弹跳小球示例 (新增)
