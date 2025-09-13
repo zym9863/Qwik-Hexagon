@@ -3,6 +3,7 @@ import { component$, useSignal } from '@builder.io/qwik'
 import qwikLogo from './assets/qwik.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
+import { HexagonSimulator } from './components/HexagonSimulator'
 
 export const App = component$(() => {
   const count = useSignal(0)
@@ -17,13 +18,12 @@ export const App = component$(() => {
           <img src={qwikLogo} class="logo qwik" alt="Qwik logo" />
         </a>
       </div>
-      <h1>Vite + Qwik</h1>
+      <h1>Vite + Qwik + Physics</h1>
       <div class="card">
         <button onClick$={() => count.value++}>count is {count.value}</button>
       </div>
-      <p class="read-the-docs">
-        Click on the Vite and Qwik logos to learn more
-      </p>
+      <p class="read-the-docs">下面是一个旋转六边形内弹跳小球的示例。</p>
+      <HexagonSimulator hexRadius={180} hexAngularVelocity={Math.PI / 6} />
     </>
   )
 })
