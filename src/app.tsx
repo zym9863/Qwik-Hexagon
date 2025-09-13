@@ -4,12 +4,14 @@ import qwikLogo from './assets/qwik.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
 import { HexagonSimulator } from './components/HexagonSimulator'
+import { ThemeToggle } from './components/ThemeToggle'
 
 export const App = component$(() => {
   const count = useSignal(0)
 
   return (
     <>
+      <ThemeToggle />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} class="logo" alt="Vite logo" />
