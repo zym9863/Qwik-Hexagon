@@ -6,43 +6,28 @@
   position: relative;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  transition: var(--transition);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+.app-header {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em var(--primary-color)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05) rotate(5deg);
+.app-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo.qwik:hover {
-  filter: drop-shadow(0 0 2em var(--secondary-color)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
-}
-
-.card {
-  padding: 2.5em;
-  background: var(--card-background);
-  border: 1px solid var(--card-border);
-  border-radius: var(--border-radius);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-soft);
-  margin: 2rem 0;
-  transition: var(--transition);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-primary);
-}
-
-.read-the-docs {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.1em;
-  margin: 2rem 0;
+.app-description {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin: 0;
   font-weight: 300;
+  opacity: 0.8;
 }
 
 /* Custom Range Slider Styles */
