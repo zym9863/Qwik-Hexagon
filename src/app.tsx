@@ -1,28 +1,17 @@
-import { component$, useSignal } from '@builder.io/qwik'
+import { component$ } from '@builder.io/qwik'
 
-import qwikLogo from './assets/qwik.svg'
-import viteLogo from '/vite.svg'
 import './app.css'
 import { HexagonSimulator } from './components/HexagonSimulator'
+import { ThemeToggle } from './components/ThemeToggle'
 
 export const App = component$(() => {
-  const count = useSignal(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://qwik.dev" target="_blank">
-          <img src={qwikLogo} class="logo qwik" alt="Qwik logo" />
-        </a>
+      <ThemeToggle />
+      <div class="app-header">
+        <h1>六边形物理模拟器</h1>
+        <p class="app-description">一个旋转六边形内弹跳小球的物理模拟演示</p>
       </div>
-      <h1>Vite + Qwik + Physics</h1>
-      <div class="card">
-        <button onClick$={() => count.value++}>count is {count.value}</button>
-      </div>
-      <p class="read-the-docs">下面是一个旋转六边形内弹跳小球的示例。</p>
       <HexagonSimulator hexRadius={180} hexAngularVelocity={Math.PI / 6} />
     </>
   )
